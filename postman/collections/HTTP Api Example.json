@@ -1,0 +1,3000 @@
+{
+	"info": {
+		"_postman_id": "ff0ba77b-f15c-4286-a5aa-7a80908a1eaa",
+		"name": "HTTP Api Example",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_uid": "45288387-ff0ba77b-f15c-4286-a5aa-7a80908a1eaa"
+	},
+	"item": [
+		{
+			"name": "comments",
+			"item": [
+				{
+					"name": "{id}",
+					"item": [
+						{
+							"name": "Comment Service get",
+							"id": "7f84d1c8-34a9-4669-b0d7-06f3c38715de",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/comments/:id?select=culpa amet mollit tempor",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"comments",
+										":id"
+									],
+									"query": [
+										{
+											"key": "select",
+											"value": "culpa amet mollit tempor"
+										}
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "culpa amet mollit tempor",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"id": "5eef6e12-8eda-4b81-9f18-53dea11f5fda",
+									"name": "The request has succeeded.",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "/postman/comments/:id?select=culpa amet mollit tempor",
+											"path": [
+												"postman",
+												"comments",
+												":id"
+											],
+											"query": [
+												{
+													"key": "select",
+													"value": "culpa amet mollit tempor"
+												}
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json",
+											"uuid": "dbc269ca-e6b8-49f6-8733-f63a52c1dcd1"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"id\": -9310759,\n  \"authorId\": 52064971,\n  \"postId\": -48909249,\n  \"body\": \"fugiat ullamco laborum\"\n}"
+								}
+							]
+						},
+						{
+							"name": "Comment Service update",
+							"id": "4c9d0437-6a08-4fbf-a7b0-0b0486901d29",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{bearerToken}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"postId\": -29716443,\n  \"body\": \"labore dolore\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/comments/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"comments",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "culpa amet mollit tempor",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"id": "da256ec0-d1f7-460b-a480-c4c6cedb2356",
+									"name": "The request has succeeded.",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											},
+											{
+												"description": "Added as a part of security scheme: bearer",
+												"key": "Authorization",
+												"value": "Bearer <token>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"postId\": -29716443,\n  \"body\": \"labore dolore\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "/postman/comments/:id",
+											"path": [
+												"postman",
+												"comments",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json",
+											"uuid": "4fdd0799-3c7b-4745-bb05-1d085a2b779c"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"id\": -9310759,\n  \"authorId\": 52064971,\n  \"postId\": -48909249,\n  \"body\": \"fugiat ullamco laborum\"\n}"
+								}
+							]
+						},
+						{
+							"name": "Comment Service delete",
+							"id": "550cdaaa-5d79-4739-a0c1-71ed11945bdb",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{bearerToken}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/comments/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"comments",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "culpa amet mollit tempor",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"id": "08deaea8-46b8-4216-8eb0-7f79df121a01",
+									"name": "There is no content to send for this request, but the headers may be useful. ",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: bearer",
+												"key": "Authorization",
+												"value": "Bearer <token>"
+											}
+										],
+										"url": {
+											"raw": "/postman/comments/:id",
+											"path": [
+												"postman",
+												"comments",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "No Content",
+									"code": 204,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": null
+								}
+							]
+						}
+					],
+					"id": "1908780e-ca36-46b8-814a-81d1565a26d2"
+				},
+				{
+					"name": "Comment Service list",
+					"id": "d381a852-1091-4238-ab2a-a1692347181d",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/comments?skip=0&limit=30&select=culpa amet mollit tempor",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"comments"
+							],
+							"query": [
+								{
+									"key": "skip",
+									"value": "0"
+								},
+								{
+									"key": "limit",
+									"value": "30"
+								},
+								{
+									"key": "select",
+									"value": "culpa amet mollit tempor"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"id": "b9ab9d18-9a64-4974-83f3-40df742623c7",
+							"name": "The request has succeeded.",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "/postman/comments?skip=0&limit=30&select=culpa amet mollit tempor",
+									"path": [
+										"postman",
+										"comments"
+									],
+									"query": [
+										{
+											"key": "skip",
+											"value": "0"
+										},
+										{
+											"key": "limit",
+											"value": "30"
+										},
+										{
+											"key": "select",
+											"value": "culpa amet mollit tempor"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"uuid": "d3c621bb-b9a8-406e-b067-7558233dae73"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"comments\": [\n    {\n      \"id\": -36111252,\n      \"authorId\": -44657496,\n      \"postId\": -59998953,\n      \"body\": \"quis ad\"\n    },\n    {\n      \"id\": -60848156,\n      \"authorId\": -39078568,\n      \"postId\": -55071079,\n      \"body\": \"sit Duis sed commodo ut\"\n    }\n  ],\n  \"total\": 53518273,\n  \"skip\": 19530373,\n  \"limit\": 30\n}"
+						}
+					]
+				},
+				{
+					"name": "Comment Service create",
+					"id": "522e73f7-2b55-46e8-9a69-16f232fa3cd0",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{bearerToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"postId\": 24215352,\n  \"body\": \"exercitation voluptate occaecat\"\n}",
+							"options": {
+								"raw": {
+									"headerFamily": "json",
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/comments",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"comments"
+							]
+						}
+					},
+					"response": [
+						{
+							"id": "425535ad-64a7-470d-a1af-78763e72b5c7",
+							"name": "The request has succeeded.",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"description": "Added as a part of security scheme: bearer",
+										"key": "Authorization",
+										"value": "Bearer <token>"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"postId\": 24215352,\n  \"body\": \"exercitation voluptate occaecat\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "/postman/comments",
+									"path": [
+										"postman",
+										"comments"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"uuid": "69138994-f544-401d-a26f-fd5d5af89233"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"id\": -9310759,\n  \"authorId\": 52064971,\n  \"postId\": -48909249,\n  \"body\": \"fugiat ullamco laborum\"\n}"
+						}
+					]
+				}
+			],
+			"id": "7257f59b-9441-49e8-8388-84ed9bfbc298"
+		},
+		{
+			"name": "courses",
+			"item": [
+				{
+					"name": "{id}",
+					"item": [
+						{
+							"name": "Course Service get",
+							"id": "3b578a17-fa44-4203-b8df-14088130365d",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "apikey",
+									"apikey": [
+										{
+											"key": "key",
+											"value": "X-API-KEY",
+											"type": "string"
+										},
+										{
+											"key": "value",
+											"value": "{{apiKey}}",
+											"type": "string"
+										},
+										{
+											"key": "in",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/courses/:id?select=culpa amet mollit tempor",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"courses",
+										":id"
+									],
+									"query": [
+										{
+											"key": "select",
+											"value": "culpa amet mollit tempor"
+										}
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "culpa amet mollit tempor",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"id": "ac153b69-8d26-4160-9add-59657ff9a070",
+									"name": "The request has succeeded.",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											},
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "X-API-KEY",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "/postman/courses/:id?select=culpa amet mollit tempor",
+											"path": [
+												"postman",
+												"courses",
+												":id"
+											],
+											"query": [
+												{
+													"key": "select",
+													"value": "culpa amet mollit tempor"
+												}
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json",
+											"uuid": "12991ce6-dd07-421c-9f89-9731e0ba15ed"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"id\": -33043607,\n  \"title\": \"ut tempor qui incididunt\",\n  \"description\": \"Ut Excepteur et\"\n}"
+								}
+							]
+						},
+						{
+							"name": "Course Service update",
+							"id": "81446474-da67-48b7-b896-b44661846fc5",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "apikey",
+									"apikey": [
+										{
+											"key": "key",
+											"value": "X-API-KEY",
+											"type": "string"
+										},
+										{
+											"key": "value",
+											"value": "{{apiKey}}",
+											"type": "string"
+										},
+										{
+											"key": "in",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"title\": \"nisi\",\n  \"description\": \"enim aute\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/courses/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"courses",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "culpa amet mollit tempor",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"id": "a6e21370-ebfb-4f4c-84a2-b7205bbd6181",
+									"name": "The request has succeeded.",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											},
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "X-API-KEY",
+												"value": "<API Key>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"title\": \"nisi\",\n  \"description\": \"enim aute\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "/postman/courses/:id",
+											"path": [
+												"postman",
+												"courses",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json",
+											"uuid": "5d3134eb-fc78-4d72-8727-3c4624c01db1"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"id\": -33043607,\n  \"title\": \"ut tempor qui incididunt\",\n  \"description\": \"Ut Excepteur et\"\n}"
+								}
+							]
+						},
+						{
+							"name": "Course Service delete",
+							"id": "96a8deb6-9291-45dd-8725-90303646d548",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "apikey",
+									"apikey": [
+										{
+											"key": "key",
+											"value": "X-API-KEY",
+											"type": "string"
+										},
+										{
+											"key": "value",
+											"value": "{{apiKey}}",
+											"type": "string"
+										},
+										{
+											"key": "in",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/courses/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"courses",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "culpa amet mollit tempor",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"id": "1ee15efe-8358-4c07-826d-c0c8b555e4cf",
+									"name": "There is no content to send for this request, but the headers may be useful. ",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "X-API-KEY",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "/postman/courses/:id",
+											"path": [
+												"postman",
+												"courses",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "No Content",
+									"code": 204,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": null
+								}
+							]
+						}
+					],
+					"id": "4ee24eb6-9feb-4446-8f24-39a6bfa0718d"
+				},
+				{
+					"name": "Course Service list",
+					"id": "9eb5da52-b394-4f73-8737-7bbd3e72c8c2",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "key",
+									"value": "X-API-KEY",
+									"type": "string"
+								},
+								{
+									"key": "value",
+									"value": "{{apiKey}}",
+									"type": "string"
+								},
+								{
+									"key": "in",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/courses?skip=culpa amet mollit tempor&limit=culpa amet mollit tempor&select=laboris ullamco anim,reprehenderit nulla velit quis",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"courses"
+							],
+							"query": [
+								{
+									"key": "skip",
+									"value": "culpa amet mollit tempor"
+								},
+								{
+									"key": "limit",
+									"value": "culpa amet mollit tempor"
+								},
+								{
+									"key": "select",
+									"value": "laboris ullamco anim,reprehenderit nulla velit quis"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"id": "d111c825-f16f-4038-94b2-51f15e5c801e",
+							"name": "The request has succeeded.",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"description": "Added as a part of security scheme: apikey",
+										"key": "X-API-KEY",
+										"value": "<API Key>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/courses?skip=culpa amet mollit tempor&limit=culpa amet mollit tempor&select=laboris ullamco anim,reprehenderit nulla velit quis",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"courses"
+									],
+									"query": [
+										{
+											"key": "skip",
+											"value": "culpa amet mollit tempor"
+										},
+										{
+											"key": "limit",
+											"value": "culpa amet mollit tempor"
+										},
+										{
+											"key": "select",
+											"value": "laboris ullamco anim,reprehenderit nulla velit quis"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"uuid": "074c8178-4b95-4784-8b96-6d2251180040"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"courses\": [\n    {\n      \"id\": -67197354,\n      \"title\": \"proident aliqua nulla\",\n      \"description\": \"incididunt ut ad\"\n    },\n    {\n      \"id\": 30471665,\n      \"title\": \"sed veniam irure eiusmod\",\n      \"description\": \"eiusmod do fugiat\"\n    }\n  ],\n  \"total\": -57728267,\n  \"skip\": 0,\n  \"limit\": 30\n}"
+						}
+					]
+				},
+				{
+					"name": "Course Service create",
+					"id": "b14c6668-390b-4724-9dec-870d3d59492a",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "key",
+									"value": "X-API-KEY",
+									"type": "string"
+								},
+								{
+									"key": "value",
+									"value": "{{apiKey}}",
+									"type": "string"
+								},
+								{
+									"key": "in",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"title\": \"in\",\n  \"description\": \"labore fugiat\"\n}",
+							"options": {
+								"raw": {
+									"headerFamily": "json",
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/courses",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"courses"
+							]
+						}
+					},
+					"response": [
+						{
+							"id": "f194d582-e089-4754-ab12-30a7e8d4d7d8",
+							"name": "The request has succeeded.",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"description": "Added as a part of security scheme: apikey",
+										"key": "X-API-KEY",
+										"value": "<API Key>"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"title\": \"in\",\n  \"description\": \"labore fugiat\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/courses",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"courses"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"uuid": "0522476d-49ee-4bf4-a27d-e243269095ec"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"id\": -33043607,\n  \"title\": \"ut tempor qui incididunt\",\n  \"description\": \"Ut Excepteur et\"\n}"
+						}
+					]
+				}
+			],
+			"id": "47484f73-f38f-4d74-bd7b-3777d939778d"
+		},
+		{
+			"name": "login",
+			"item": [
+				{
+					"name": "Auth Service create",
+					"id": "9648f043-2a00-47ee-910f-3bf4dc8caac9",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"email\": \"sed i\",\n  \"password\": \"enim ut quis\"\n}",
+							"options": {
+								"raw": {
+									"headerFamily": "json",
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/login",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": [
+						{
+							"id": "d27b9452-289a-4890-ab98-f5286475d59a",
+							"name": "The request has succeeded.",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"email\": \"sed i\",\n  \"password\": \"enim ut quis\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/login",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"uuid": "ef5bf609-f91e-4a8a-88eb-8515489b37de"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"token\": \"non in\"\n}"
+						}
+					]
+				}
+			],
+			"id": "c914e5ea-8ff1-4128-af0d-a5a1c92b5150"
+		},
+		{
+			"name": "posts",
+			"item": [
+				{
+					"name": "{id}",
+					"item": [
+						{
+							"name": "Post Service get",
+							"id": "17de86d6-4051-4a38-abb7-1334c1968239",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/posts/:id?select=culpa amet mollit tempor",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"posts",
+										":id"
+									],
+									"query": [
+										{
+											"key": "select",
+											"value": "culpa amet mollit tempor"
+										}
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "culpa amet mollit tempor",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"id": "2aac71ac-1e34-4bf6-a620-1c6bfb93a13f",
+									"name": "The request has succeeded.",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/posts/:id?select=culpa amet mollit tempor",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"posts",
+												":id"
+											],
+											"query": [
+												{
+													"key": "select",
+													"value": "culpa amet mollit tempor"
+												}
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json",
+											"uuid": "d4b9eb9b-2954-4218-b9f2-84c396e766e4"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"id\": 43248065,\n  \"authorId\": 62356614,\n  \"title\": \"aut\",\n  \"body\": \"do qui non ad\"\n}"
+								}
+							]
+						},
+						{
+							"name": "Post Service update",
+							"id": "5ad02496-a0a5-4b22-b5ac-ff7998a009f0",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{bearerToken}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"title\": \"eiusmod\",\n  \"body\": \"reprehenderit\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/posts/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"posts",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "culpa amet mollit tempor",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"id": "075d3aa1-217f-4951-b022-b37f881134aa",
+									"name": "The request has succeeded.",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											},
+											{
+												"description": "Added as a part of security scheme: bearer",
+												"key": "Authorization",
+												"value": "Bearer <token>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"title\": \"eiusmod\",\n  \"body\": \"reprehenderit\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/posts/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"posts",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json",
+											"uuid": "a895853b-ce37-4c8d-ac0d-0b94b5b0de86"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"id\": 43248065,\n  \"authorId\": 62356614,\n  \"title\": \"aut\",\n  \"body\": \"do qui non ad\"\n}"
+								}
+							]
+						},
+						{
+							"name": "Post Service delete",
+							"id": "d8dee6dc-1471-4133-858c-4fa09067b148",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{bearerToken}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/posts/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"posts",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "culpa amet mollit tempor",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"id": "ab32d8b1-ac0e-4489-9483-951110bb5d88",
+									"name": "There is no content to send for this request, but the headers may be useful. ",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: bearer",
+												"key": "Authorization",
+												"value": "Bearer <token>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/posts/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"posts",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "No Content",
+									"code": 204,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": null
+								}
+							]
+						}
+					],
+					"id": "c5c03d79-f60d-4821-9be0-8ed2fc3c6e2c"
+				},
+				{
+					"name": "{postId}",
+					"item": [
+						{
+							"name": "comments",
+							"item": [
+								{
+									"name": "Post Service get Comments",
+									"id": "5c66b61a-b4e1-4976-99b4-c8f1ac948023",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/posts/:postId/comments?skip=0&limit=30&select=culpa amet mollit tempor",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"posts",
+												":postId",
+												"comments"
+											],
+											"query": [
+												{
+													"key": "skip",
+													"value": "0"
+												},
+												{
+													"key": "limit",
+													"value": "30"
+												},
+												{
+													"key": "select",
+													"value": "culpa amet mollit tempor"
+												}
+											],
+											"variable": [
+												{
+													"key": "postId",
+													"value": "culpa amet mollit tempor",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"id": "b780d4bf-5bc5-4a18-a193-0f8e169e9108",
+											"name": "The request has succeeded.",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/posts/:postId/comments?skip=0&limit=30&select=culpa amet mollit tempor",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"posts",
+														":postId",
+														"comments"
+													],
+													"query": [
+														{
+															"key": "skip",
+															"value": "0"
+														},
+														{
+															"key": "limit",
+															"value": "30"
+														},
+														{
+															"key": "select",
+															"value": "culpa amet mollit tempor"
+														}
+													],
+													"variable": [
+														{
+															"key": "postId"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json",
+													"uuid": "61246936-ad4f-4be3-95e9-b086c1b9e81f"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"comments\": [\n    {\n      \"id\": -36111252,\n      \"authorId\": -44657496,\n      \"postId\": -59998953,\n      \"body\": \"quis ad\"\n    },\n    {\n      \"id\": -60848156,\n      \"authorId\": -39078568,\n      \"postId\": -55071079,\n      \"body\": \"sit Duis sed commodo ut\"\n    }\n  ],\n  \"total\": 53518273,\n  \"skip\": 19530373,\n  \"limit\": 30\n}"
+										}
+									]
+								}
+							],
+							"id": "6dd234a5-7e6b-444c-8769-3eddaf357706"
+						}
+					],
+					"id": "391023ce-b099-435e-8211-84541261adc1"
+				},
+				{
+					"name": "Post Service list",
+					"id": "383a7bea-9407-411c-9eac-3da3ef98891a",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/posts?skip=0&limit=30&select=culpa amet mollit tempor",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"posts"
+							],
+							"query": [
+								{
+									"key": "skip",
+									"value": "0"
+								},
+								{
+									"key": "limit",
+									"value": "30"
+								},
+								{
+									"key": "select",
+									"value": "culpa amet mollit tempor"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"id": "9e368da2-7208-44f4-8e48-0ff258d3397b",
+							"name": "The request has succeeded.",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/posts?skip=0&limit=30&select=culpa amet mollit tempor",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"posts"
+									],
+									"query": [
+										{
+											"key": "skip",
+											"value": "0"
+										},
+										{
+											"key": "limit",
+											"value": "30"
+										},
+										{
+											"key": "select",
+											"value": "culpa amet mollit tempor"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"uuid": "e0d723cb-eef2-4b6c-94f4-8849d757b864"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"posts\": [\n    {\n      \"id\": -47209800,\n      \"authorId\": 14334884,\n      \"title\": \"aliqua eu\",\n      \"body\": \"officia Duis esse\"\n    },\n    {\n      \"id\": -87043596,\n      \"authorId\": -38279026,\n      \"title\": \"sed deserunt exercitation\",\n      \"body\": \"eu ad\"\n    }\n  ],\n  \"total\": -64991112,\n  \"skip\": -67491610,\n  \"limit\": 30\n}"
+						}
+					]
+				},
+				{
+					"name": "Post Service create",
+					"id": "b65a472d-bd86-4c05-861a-2cc14e134cb5",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{bearerToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"title\": \"deserunt sed sint\",\n  \"body\": \"in velit\"\n}",
+							"options": {
+								"raw": {
+									"headerFamily": "json",
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/posts",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"posts"
+							]
+						}
+					},
+					"response": [
+						{
+							"id": "a6656139-4495-40b4-ad69-6aed92a47601",
+							"name": "The request has succeeded.",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"description": "Added as a part of security scheme: bearer",
+										"key": "Authorization",
+										"value": "Bearer <token>"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"title\": \"deserunt sed sint\",\n  \"body\": \"in velit\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/posts",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"posts"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"uuid": "19441cab-1d0a-41d4-8fc4-b1ed48c1b7c8"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"id\": 43248065,\n  \"authorId\": 62356614,\n  \"title\": \"aut\",\n  \"body\": \"do qui non ad\"\n}"
+						}
+					]
+				}
+			],
+			"id": "c4691d27-cddf-44cc-bdc3-06d1eb794d22"
+		},
+		{
+			"name": "tasks",
+			"item": [
+				{
+					"name": "{id}",
+					"item": [
+						{
+							"name": "Task Service get",
+							"id": "e4358830-51c9-40e5-8397-0984c6ed8d98",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "username",
+											"value": "{{basicAuthUsername}}",
+											"type": "string"
+										},
+										{
+											"key": "password",
+											"value": "{{basicAuthPassword}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/tasks/:id?select=culpa amet mollit tempor",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"tasks",
+										":id"
+									],
+									"query": [
+										{
+											"key": "select",
+											"value": "culpa amet mollit tempor"
+										}
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "culpa amet mollit tempor",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"id": "387b3795-1ec9-4255-8217-25ec971a096b",
+									"name": "The request has succeeded.",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											},
+											{
+												"description": "Added as a part of security scheme: basic",
+												"key": "Authorization",
+												"value": "Basic <credentials>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/tasks/:id?select=culpa amet mollit tempor",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"tasks",
+												":id"
+											],
+											"query": [
+												{
+													"key": "select",
+													"value": "culpa amet mollit tempor"
+												}
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json",
+											"uuid": "a688bdc2-290c-48c4-8eda-ffcc9a849077"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"id\": 22274097,\n  \"title\": \"veniam enim nostrud voluptate\",\n  \"description\": \"voluptate nostrud dolor elit\",\n  \"status\": \"In Progress\"\n}"
+								}
+							]
+						},
+						{
+							"name": "Task Service update",
+							"id": "adbcc888-204b-418e-9d78-7519845cbfc5",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "username",
+											"value": "{{basicAuthUsername}}",
+											"type": "string"
+										},
+										{
+											"key": "password",
+											"value": "{{basicAuthPassword}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"title\": \"sit dolor\",\n  \"description\": \"minim\",\n  \"status\": \"Archived\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/tasks/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"tasks",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "culpa amet mollit tempor",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"id": "45649cd2-effa-4c35-93ce-8e067506757e",
+									"name": "The request has succeeded.",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											},
+											{
+												"description": "Added as a part of security scheme: basic",
+												"key": "Authorization",
+												"value": "Basic <credentials>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"title\": \"sit dolor\",\n  \"description\": \"minim\",\n  \"status\": \"Archived\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/tasks/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"tasks",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json",
+											"uuid": "3c7db2d7-85bf-45b8-b0f9-c357b15c8333"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"id\": 22274097,\n  \"title\": \"veniam enim nostrud voluptate\",\n  \"description\": \"voluptate nostrud dolor elit\",\n  \"status\": \"In Progress\"\n}"
+								}
+							]
+						},
+						{
+							"name": "Task Service delete",
+							"id": "b1b27b05-8f82-4b45-b9a1-200aad277f61",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "username",
+											"value": "{{basicAuthUsername}}",
+											"type": "string"
+										},
+										{
+											"key": "password",
+											"value": "{{basicAuthPassword}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/tasks/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"tasks",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "culpa amet mollit tempor",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"id": "fae26756-7ecb-430f-acfd-1e0088971bf0",
+									"name": "There is no content to send for this request, but the headers may be useful. ",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: basic",
+												"key": "Authorization",
+												"value": "Basic <credentials>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/tasks/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"tasks",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "No Content",
+									"code": 204,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": null
+								}
+							]
+						}
+					],
+					"id": "8d148c7f-557e-4e13-91f3-52034343f7cb"
+				},
+				{
+					"name": "Task Service list",
+					"id": "b4187e08-e5ae-4ee7-b8a2-d254bf7097ae",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/tasks?skip=culpa amet mollit tempor&limit=culpa amet mollit tempor&select=laboris ullamco anim,reprehenderit nulla velit quis",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"tasks"
+							],
+							"query": [
+								{
+									"key": "skip",
+									"value": "culpa amet mollit tempor"
+								},
+								{
+									"key": "limit",
+									"value": "culpa amet mollit tempor"
+								},
+								{
+									"key": "select",
+									"value": "laboris ullamco anim,reprehenderit nulla velit quis"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"id": "b479ac61-0b15-4813-8a46-d961e79bb62d",
+							"name": "The request has succeeded.",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/tasks?skip=culpa amet mollit tempor&limit=culpa amet mollit tempor&select=laboris ullamco anim,reprehenderit nulla velit quis",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"tasks"
+									],
+									"query": [
+										{
+											"key": "skip",
+											"value": "culpa amet mollit tempor"
+										},
+										{
+											"key": "limit",
+											"value": "culpa amet mollit tempor"
+										},
+										{
+											"key": "select",
+											"value": "laboris ullamco anim,reprehenderit nulla velit quis"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"uuid": "97f0a7f4-ffcc-49e9-be38-915776e8769a"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"tasks\": [\n    {\n      \"id\": -67992589,\n      \"title\": \"in consectetur dolor\",\n      \"description\": \"ea\",\n      \"status\": \"Done\"\n    },\n    {\n      \"id\": -50054768,\n      \"title\": \"amet consectetur eiusmod\",\n      \"description\": \"Excepteur non consequat\",\n      \"status\": \"Done\"\n    }\n  ],\n  \"total\": -28712876,\n  \"skip\": 0,\n  \"limit\": 30\n}"
+						}
+					]
+				},
+				{
+					"name": "Task Service create",
+					"id": "fb7dd547-1ad8-431a-a8c7-cb6dd579adfc",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "{{basicAuthUsername}}",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "{{basicAuthPassword}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"title\": \"id Excepteur adipisicing laborum\",\n  \"description\": \"eiusmod \",\n  \"status\": \"Backlog\"\n}",
+							"options": {
+								"raw": {
+									"headerFamily": "json",
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/tasks",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"tasks"
+							]
+						}
+					},
+					"response": [
+						{
+							"id": "2df0e66e-70bb-41cd-a4f1-8c8365963bbd",
+							"name": "The request has succeeded.",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"description": "Added as a part of security scheme: basic",
+										"key": "Authorization",
+										"value": "Basic <credentials>"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"title\": \"id Excepteur adipisicing laborum\",\n  \"description\": \"eiusmod \",\n  \"status\": \"Backlog\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/tasks",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"tasks"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"uuid": "c5745717-432b-4815-961b-eda6ac2ddbe5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"id\": 22274097,\n  \"title\": \"veniam enim nostrud voluptate\",\n  \"description\": \"voluptate nostrud dolor elit\",\n  \"status\": \"In Progress\"\n}"
+						}
+					]
+				}
+			],
+			"id": "dbc1ab18-203a-467e-a78e-1f090ce55d2c"
+		},
+		{
+			"name": "users",
+			"item": [
+				{
+					"name": "{authorId}",
+					"item": [
+						{
+							"name": "comments",
+							"item": [
+								{
+									"name": "User Service get Comments",
+									"id": "0c4c76b7-a86a-4fe5-9738-f9e4ab6d5d9a",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/users/:authorId/comments?skip=0&limit=30&select=culpa amet mollit tempor",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"users",
+												":authorId",
+												"comments"
+											],
+											"query": [
+												{
+													"key": "skip",
+													"value": "0"
+												},
+												{
+													"key": "limit",
+													"value": "30"
+												},
+												{
+													"key": "select",
+													"value": "culpa amet mollit tempor"
+												}
+											],
+											"variable": [
+												{
+													"key": "authorId",
+													"value": "culpa amet mollit tempor",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"id": "fb99962a-535a-48c1-b050-d0c77636509d",
+											"name": "The request has succeeded.",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/users/:authorId/comments?skip=0&limit=30&select=culpa amet mollit tempor",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"users",
+														":authorId",
+														"comments"
+													],
+													"query": [
+														{
+															"key": "skip",
+															"value": "0"
+														},
+														{
+															"key": "limit",
+															"value": "30"
+														},
+														{
+															"key": "select",
+															"value": "culpa amet mollit tempor"
+														}
+													],
+													"variable": [
+														{
+															"key": "authorId"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json",
+													"uuid": "d5109604-fe85-4fd4-9962-d5c9a218d440"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"comments\": [\n    {\n      \"id\": -36111252,\n      \"authorId\": -44657496,\n      \"postId\": -59998953,\n      \"body\": \"quis ad\"\n    },\n    {\n      \"id\": -60848156,\n      \"authorId\": -39078568,\n      \"postId\": -55071079,\n      \"body\": \"sit Duis sed commodo ut\"\n    }\n  ],\n  \"total\": 53518273,\n  \"skip\": 19530373,\n  \"limit\": 30\n}"
+										}
+									]
+								}
+							],
+							"id": "62328529-7c98-4f56-9c33-5dfb74876448"
+						},
+						{
+							"name": "posts",
+							"item": [
+								{
+									"name": "User Service get Posts",
+									"id": "c151afdf-ca4f-4eef-8d6c-8ca56c4262d0",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/users/:authorId/posts?skip=0&limit=30&select=culpa amet mollit tempor",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"users",
+												":authorId",
+												"posts"
+											],
+											"query": [
+												{
+													"key": "skip",
+													"value": "0"
+												},
+												{
+													"key": "limit",
+													"value": "30"
+												},
+												{
+													"key": "select",
+													"value": "culpa amet mollit tempor"
+												}
+											],
+											"variable": [
+												{
+													"key": "authorId",
+													"value": "culpa amet mollit tempor",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"id": "1278da79-b16b-4efb-b5aa-42bda2d7edfb",
+											"name": "The request has succeeded.",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/users/:authorId/posts?skip=0&limit=30&select=culpa amet mollit tempor",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"users",
+														":authorId",
+														"posts"
+													],
+													"query": [
+														{
+															"key": "skip",
+															"value": "0"
+														},
+														{
+															"key": "limit",
+															"value": "30"
+														},
+														{
+															"key": "select",
+															"value": "culpa amet mollit tempor"
+														}
+													],
+													"variable": [
+														{
+															"key": "authorId"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json",
+													"uuid": "1e046fa3-6aca-483d-ad38-a6f87897efc9"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"posts\": [\n    {\n      \"id\": -47209800,\n      \"authorId\": 14334884,\n      \"title\": \"aliqua eu\",\n      \"body\": \"officia Duis esse\"\n    },\n    {\n      \"id\": -87043596,\n      \"authorId\": -38279026,\n      \"title\": \"sed deserunt exercitation\",\n      \"body\": \"eu ad\"\n    }\n  ],\n  \"total\": -64991112,\n  \"skip\": -67491610,\n  \"limit\": 30\n}"
+										}
+									]
+								}
+							],
+							"id": "61446090-c34b-4c92-94b4-486455948dcb"
+						}
+					],
+					"id": "63f27a42-a53f-426f-9477-b9abf38e67d9"
+				},
+				{
+					"name": "{id}",
+					"item": [
+						{
+							"name": "User Service get",
+							"id": "1e19356f-7f5c-4c34-ad3c-bd271db75f02",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/users/:id?select=culpa amet mollit tempor",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"users",
+										":id"
+									],
+									"query": [
+										{
+											"key": "select",
+											"value": "culpa amet mollit tempor"
+										}
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "culpa amet mollit tempor",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"id": "37d8e0df-c8a6-44e0-aebd-9640c07859cb",
+									"name": "The request has succeeded.",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/users/:id?select=culpa amet mollit tempor",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"users",
+												":id"
+											],
+											"query": [
+												{
+													"key": "select",
+													"value": "culpa amet mollit tempor"
+												}
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json",
+											"uuid": "799c85a2-7221-4d46-b5f4-ab349cf7b203"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"id\": -92555990,\n  \"email\": \"cillum occaecat\",\n  \"firstName\": \"culpa\",\n  \"lastName\": \"aute fugiat et\"\n}"
+								}
+							]
+						},
+						{
+							"name": "User Service update",
+							"id": "c0f8c5a0-c9a0-4440-bce2-f2f53df0fb22",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{bearerToken}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"email\": \"ipsum labore\",\n  \"firstName\": \"ea eiusmod sit\",\n  \"lastName\": \"nulla quis dolore pariatur labore\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/users/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"users",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "culpa amet mollit tempor",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"id": "ce3c9811-16f8-44c1-8857-23f867366820",
+									"name": "The request has succeeded.",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											},
+											{
+												"description": "Added as a part of security scheme: bearer",
+												"key": "Authorization",
+												"value": "Bearer <token>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"email\": \"ipsum labore\",\n  \"firstName\": \"ea eiusmod sit\",\n  \"lastName\": \"nulla quis dolore pariatur labore\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/users/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"users",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json",
+											"uuid": "bc98de51-af09-4a63-b558-d67ccfffd387"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"id\": -92555990,\n  \"email\": \"cillum occaecat\",\n  \"firstName\": \"culpa\",\n  \"lastName\": \"aute fugiat et\"\n}"
+								}
+							]
+						},
+						{
+							"name": "User Service delete",
+							"id": "dc6e396c-e79a-4e83-9f56-5a8e3749a84e",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{bearerToken}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/users/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"users",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "culpa amet mollit tempor",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"id": "8b05e6cf-64e0-4f55-8234-729e5ff31344",
+									"name": "There is no content to send for this request, but the headers may be useful. ",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: bearer",
+												"key": "Authorization",
+												"value": "Bearer <token>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/users/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"users",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "No Content",
+									"code": 204,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": null
+								}
+							]
+						}
+					],
+					"id": "bedc0304-92e6-4d04-b84f-1d4fc0630064"
+				},
+				{
+					"name": "User Service list",
+					"id": "26932b11-cfce-4c08-beb5-fb327fc38418",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/users?skip=culpa amet mollit tempor&limit=culpa amet mollit tempor&select=laboris ullamco anim,reprehenderit nulla velit quis",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"users"
+							],
+							"query": [
+								{
+									"key": "skip",
+									"value": "culpa amet mollit tempor"
+								},
+								{
+									"key": "limit",
+									"value": "culpa amet mollit tempor"
+								},
+								{
+									"key": "select",
+									"value": "laboris ullamco anim,reprehenderit nulla velit quis"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"id": "7208d70c-cc60-4225-b31d-be29466f6580",
+							"name": "The request has succeeded.",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/users?skip=culpa amet mollit tempor&limit=culpa amet mollit tempor&select=laboris ullamco anim,reprehenderit nulla velit quis",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"users"
+									],
+									"query": [
+										{
+											"key": "skip",
+											"value": "culpa amet mollit tempor"
+										},
+										{
+											"key": "limit",
+											"value": "culpa amet mollit tempor"
+										},
+										{
+											"key": "select",
+											"value": "laboris ullamco anim,reprehenderit nulla velit quis"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"uuid": "1a890d8f-8fef-476d-9afc-56b02420270a"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"users\": [\n    {\n      \"id\": 87729439,\n      \"email\": \"et exercitation fugiat\",\n      \"firstName\": \"adipisicing ex incididunt aliqua ut\",\n      \"lastName\": \"dolore\"\n    },\n    {\n      \"id\": 66872969,\n      \"email\": \"enim cupidatat\",\n      \"firstName\": \"velit nulla pariatur veniam\",\n      \"lastName\": \"aliqua anim consequat nisi\"\n    }\n  ],\n  \"total\": 27378996,\n  \"skip\": 0,\n  \"limit\": 30\n}"
+						}
+					]
+				},
+				{
+					"name": "User Service create",
+					"id": "2cfc0472-5546-48fc-9cf3-82ad30a50a3a",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"email\": \"dolor dolor culpa sunt aliqua\",\n  \"firstName\": \"ut irure dolore laboris sed\",\n  \"lastName\": \"voluptate exercitation commodo minim enim\",\n  \"password\": \"sint cupidatat sed\"\n}",
+							"options": {
+								"raw": {
+									"headerFamily": "json",
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/users",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": [
+						{
+							"id": "4c1e87d5-f670-46ec-89e6-a8396a072c92",
+							"name": "The request has succeeded.",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"email\": \"dolor dolor culpa sunt aliqua\",\n  \"firstName\": \"ut irure dolore laboris sed\",\n  \"lastName\": \"voluptate exercitation commodo minim enim\",\n  \"password\": \"sint cupidatat sed\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/users",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"users"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"uuid": "eb77e434-9a2a-48fa-ba6a-186ebc0ec4df"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"id\": -92555990,\n  \"email\": \"cillum occaecat\",\n  \"firstName\": \"culpa\",\n  \"lastName\": \"aute fugiat et\"\n}"
+						}
+					]
+				}
+			],
+			"id": "2d722921-42c9-406b-ba4a-ca430fbd57c6"
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "cupidatat fugiat",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "aef96c1e-0714-4c56-afca-9f5b32181158",
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "e5a68140-700b-4249-8467-c08e37599e86",
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "f6260ccf-658e-4c9e-bb28-40fa60f17116",
+			"key": "baseUrl",
+			"value": "http://http.hexlet.app/postman"
+		}
+	]
+}

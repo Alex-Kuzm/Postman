@@ -1745,7 +1745,7 @@
   },
   "servers": [
     {
-      "url": "/postman",
+      "url": "http://http.hexlet.app/postman",
       "description": "Server endpoint",
       "variables": {
 
